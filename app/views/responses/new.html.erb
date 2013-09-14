@@ -1,0 +1,13 @@
+<h3> please provide a response to the following question</h3>
+<br>
+<br>
+<br>
+<%= turkee_form_for(@response, params) do |f| %>
+	<%= f.text_field :content, :disabled => @disabled %>
+
+	<%= f.submit :disabled => @disabled %>
+<% end %>
+
+
+
+<p>disabled?... <%= @disabled %></p>
