@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20130914053031) do
     t.text    "content"
     t.integer "response_id"
     t.integer "asker_id"
+    t.string  "hit_id"
     t.string  "asker"
     t.string  "status",      :default => "open"
   end
