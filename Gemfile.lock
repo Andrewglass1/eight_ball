@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/Andrewglass1/turkee.git
+  remote: https://github.com/aantix/turkee.git
   revision: 8cfe9bd96f2fcad8fcac068384a83286e4cf9974
   branch: master
   specs:
