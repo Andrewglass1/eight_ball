@@ -1,11 +1,14 @@
-<h3> please provide a response to the following question</h3>
+<h3> <%= @question.description %></h3>
 <br>
 <br>
+<h3><%= @question.video_url %></h3>
 <br>
 <%= turkee_form_for(@response, params) do |f| %>
-	<%= f.text_field :content, :disabled => @disabled %>
+	<%= f.text_field :rating, :disabled => @disabled %>
+	<%= f.hidden_field :question_id, value: @question.id %>
+	<%= f.label "(1-10, 10 being amazing cat-tastic, 1 being kitty nibble)" %>
 
-	<%= f.submit :disabled => @disabled %>
+	<%= f.submit "submit rating", :disabled => @disabled %>
 <% end %>
 
 

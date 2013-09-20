@@ -1,11 +1,11 @@
 class Question < ActiveRecord::Migration
   def up
   	create_table :questions do |t|
-  		t.text :content
+  		t.text    :description
+      t.string  :title
   		t.integer :response_id
-  		t.integer :asker_id
       t.string  :hit_id
-  		t.string  :asker
+      t.string  :video_url
   		t.string  :status, :default => "open"
     end
   end

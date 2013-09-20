@@ -1,7 +1,7 @@
 class ResponsesController < ApplicationController
 
 	def new
-		@question = Question.find(params[:question_id])
+		@question = Question.find(params[:question_id]) if params[:question_id]
 		@question ||= Question.where(:status => "open").limit(1).first
 
 		redirect_to no_hits_responses_path unless @question

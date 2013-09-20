@@ -14,16 +14,16 @@
 ActiveRecord::Schema.define(:version => 20130914053031) do
 
   create_table "questions", :force => true do |t|
-    t.text    "content"
+    t.text    "description"
+    t.string  "title"
     t.integer "response_id"
-    t.integer "asker_id"
     t.string  "hit_id"
-    t.string  "asker"
+    t.string  "video_url"
     t.string  "status",      :default => "open"
   end
 
   create_table "responses", :force => true do |t|
-    t.text    "content"
+    t.string  "rating"
     t.integer "question_id"
     t.integer "responder_id"
     t.string  "approval_status"
